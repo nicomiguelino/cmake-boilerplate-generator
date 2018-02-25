@@ -13,7 +13,7 @@ parser = ArgumentParser(description = 'CMake C++ Project Generator written in Py
 parser.add_argument(
     '--project-name',
     action = 'store',
-    default = 'SAMPLE_CMAKE_PROJECT'
+    default = 'sample_cmake_project'
 )
 
 parser.add_argument(
