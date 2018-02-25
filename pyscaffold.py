@@ -6,8 +6,6 @@ from generators.project_gen import ProjectGenerator
 
 from utilities.constants.file_constants import GENERATED_FILES_PATH
 
-# TODO: Add flag for CMake project location.
-
 parser = ArgumentParser(description = 'CMake C++ Project Generator written in Python 3')
 
 parser.add_argument(
@@ -28,14 +26,22 @@ parser.add_argument(
     default = 'c++14'
 )
 
+parser.add_argument(
+    '--location',
+    action = 'store',
+    default = path.abspath('.')
+)
+
 arguments = parser.parse_args()
+
+new_project_dir = path.join(arguments.location, arguments.project_name)
 
 project_generator = ProjectGenerator(arguments.__dict__)
 project_generator.generate()
 
-NEW_PROJECT_DIR = arguments.project_name
+print(new_project_dir)
 
-if not path.exists(NEW_PROJECT_DIR):
-    copytree(GENERATED_FILES_PATH, arguments.project_name)
+if not path.exists(new_project_dir):
+    copytree(GENERATED_FILES_PATH, new_project_dir)
 
 rmtree(GENERATED_FILES_PATH)
