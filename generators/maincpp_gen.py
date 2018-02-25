@@ -7,7 +7,7 @@ class MainCppGenerator:
     def __init__(self):
         self.context = dict()
 
-    def generate_file(self):
+    def generate(self):
         if not path.exists(GENERATED_FILES_PATH):
             mkdir(GENERATED_FILES_PATH)
 

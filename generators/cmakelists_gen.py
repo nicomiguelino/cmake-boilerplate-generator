@@ -7,7 +7,7 @@ class CMakeListsGenerator:
     def __init__(self, context):
         self.context = context
 
-    def generate_file(self):
+    def generate(self):
         if not path.exists(GENERATED_FILES_PATH):
             mkdir(GENERATED_FILES_PATH)
 
