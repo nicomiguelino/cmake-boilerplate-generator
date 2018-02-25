@@ -1,5 +1,5 @@
 from argparse import ArgumentParser
-from utilities.cmakelists_gen import CMakeListsGenerator
+from generators.cmakelists_gen import CMakeListsGenerator
 
 parser = ArgumentParser(description = 'CMake C++ Project Generator written in Python 3')
 
