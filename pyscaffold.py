@@ -6,7 +6,7 @@ from generators.project_gen import ProjectGenerator
 
 from utilities.constants.file_constants import GENERATED_FILES_PATH
 
-# TODO: For each generator object's generate method, go to root dir. Use the TearDown technique. Use function wrappers.
+# TODO: Add flag for CMake project location.
 
 parser = ArgumentParser(description = 'CMake C++ Project Generator written in Python 3')
 
