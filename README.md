@@ -16,9 +16,13 @@ Are you experiencing the hassle of manually creating folders - build, include, l
 
 ## Limitations ##
 
-PyScaffold is not a mature framrework to date. It's limitations are as follows:
+PyScaffold is not a mature framework and is under active development. It's limitations are as follows:
 * The `--help` option is not yet reliable. Options don't have descriptions in it.
 * Generating of CMake project for C is not yet available.
 * The directory structure of generated project is fixed. The user do not have the power to modify it via a configuration file (at least).
 * This tool was developed on a Windows machine and is not yet tested on Linux.
 * The `--location` option is not yet handled properly. Specifying a Windows path will cause some errors, caused specifically by the backslash not being handled as an escape character. Yet, you can use relative path names like `.` and `..`.
+
+## References ##
+* If you don't have an idea on what CMake is, you could refer to this [link](https://en.wikipedia.org/wiki/CMake). **TLDR:** It's a hassle for some C/C++ developers to use make. CMake lets you specify rules on compiling, linking and executing, and it will generate a Makefile for you.
+* You could use this [tutorial](http://derekmolloy.ie/hello-world-introductions-to-cmake/) as a hands-on reference. It's presented in a straighforward manner.
