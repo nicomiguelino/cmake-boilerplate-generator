@@ -26,3 +26,4 @@ PyScaffold is not a mature framework and is under active development. It's limit
 ## References ##
 * If you don't have an idea on what CMake is, you could refer to this [link](https://en.wikipedia.org/wiki/CMake). **TLDR:** It's a hassle for some C/C++ developers to use make. CMake lets you specify rules on compiling, linking and executing, and it will generate a Makefile for you.
 * You could use this [tutorial](http://derekmolloy.ie/hello-world-introductions-to-cmake/) as a hands-on reference. It's presented in a straighforward manner.
+* I would also like to recommend [this one](https://tuannguyen68.gitbooks.io/learning-cmake-a-beginner-s-guide/content/chap1/chap1.html) in case you're not interested in the previous tutorial link. Note that this is just a part of the tutorial series. You could proceed with the succeeding part of the series if you want to.
