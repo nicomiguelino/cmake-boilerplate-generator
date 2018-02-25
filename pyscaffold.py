@@ -6,6 +6,8 @@ from generators.project_gen import ProjectGenerator
 
 from utilities.constants.file_constants import GENERATED_FILES_PATH
 
+# TODO: Convert Windows path format to Linux for consistency.
+
 parser = ArgumentParser(description = 'CMake C++ Project Generator written in Python 3')
 
 parser.add_argument(
