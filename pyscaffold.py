@@ -1,5 +1,6 @@
 from argparse import ArgumentParser
 from generators.cmakelists_gen import CMakeListsGenerator
+from generators.maincpp_gen import MainCppGenerator
 
 parser = ArgumentParser(description = 'CMake C++ Project Generator written in Python 3')
 
@@ -25,3 +26,6 @@ arguments = parser.parse_args()
 
 cml_generator = CMakeListsGenerator(arguments.__dict__)
 cml_generator.generate_file()
+
+maincpp_generator = MainCppGenerator()
+maincpp_generator.generate_file()
