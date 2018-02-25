@@ -25,6 +25,5 @@ class CMakeListsGenerator:
             mkdir(GENERATED_FILES_PATH)
             chdir(GENERATED_FILES_PATH)
 
-
             with open('CMakeLists.txt', FileMode.WRITE_ONLY) as output_file_handler:
                 output_file_handler.write(template_output)
