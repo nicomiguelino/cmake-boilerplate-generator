@@ -19,3 +19,5 @@ class CMakeListsGenerator:
 
             with open(CMAKELISTS_FILENAME, 'w') as output_file_handler:
                 output_file_handler.write(template_output)
+
+        chdir(PROJECT_ROOT_PATH)

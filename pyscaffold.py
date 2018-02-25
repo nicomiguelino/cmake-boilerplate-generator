@@ -1,10 +1,10 @@
 from argparse import ArgumentParser
-from os import chdir, path
+from os import path
 from shutil import copytree, rmtree
 
 from generators.project_gen import ProjectGenerator
 
-from utilities.constants.file_constants import PROJECT_ROOT_PATH, GENERATED_FILES_PATH
+from utilities.constants.file_constants import GENERATED_FILES_PATH
 
 # TODO: For each generator object's generate method, go to root dir. Use the TearDown technique. Use function wrappers.
 
@@ -32,10 +32,6 @@ arguments = parser.parse_args()
 
 project_generator = ProjectGenerator(arguments.__dict__)
 project_generator.generate()
-
-# TODO: Copy generated files in current directory. Remove import and cd action later.
-
-chdir(PROJECT_ROOT_PATH)
 
 NEW_PROJECT_DIR = arguments.project_name
 
