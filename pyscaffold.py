@@ -41,8 +41,6 @@ new_project_dir = path.join(arguments.location, arguments.project_name)
 project_generator = ProjectGenerator(arguments.__dict__)
 project_generator.generate()
 
-print(new_project_dir)
-
 if not path.exists(new_project_dir):
     copytree(GENERATED_FILES_PATH, new_project_dir)
 
