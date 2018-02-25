@@ -15,7 +15,7 @@ class CMakeListsGenerator:
             template_handler = Template(input_file_handler.read())
             template_output = template_handler.substitute(self.context)
 
-            chdir(GENERATED_FILES_PATH)
+            chdir(CMAKE_PROJECT_RELEASE_DIR)
 
             with open(CMAKELISTS_FILENAME, 'w') as output_file_handler:
                 output_file_handler.write(template_output)

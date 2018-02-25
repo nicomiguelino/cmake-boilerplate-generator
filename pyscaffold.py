@@ -28,13 +28,8 @@ arguments = parser.parse_args()
 project_generator = ProjectGenerator(arguments.project_name)
 project_generator.generate()
 
-# TODO: Enable generator once it's ready to be integrated with ProjectGenerator.
+cml_generator = CMakeListsGenerator(arguments.__dict__)
+cml_generator.generate_file()
 
-# cml_generator = CMakeListsGenerator(arguments.__dict__)
-# cml_generator.generate_file()
-
-
-# TODO: Enable generator once it's ready to be integrated with ProjectGenerator.
-
-# maincpp_generator = MainCppGenerator()
-# maincpp_generator.generate_file()
+maincpp_generator = MainCppGenerator()
+maincpp_generator.generate_file()
