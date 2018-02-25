@@ -4,6 +4,7 @@ from string import Template
 
 PROJECT_ROOT_PATH = path.abspath('.')
 CMAKELISTS_INPUT_PATH = 'templates/CMakeLists.txt'
+CMAKELISTS_FILENAME = 'CMakeLists.txt'
 GENERATED_FILES_PATH = path.join(PROJECT_ROOT_PATH, 'generated_files')
 
 class FileMode:
@@ -25,5 +26,5 @@ class CMakeListsGenerator:
             mkdir(GENERATED_FILES_PATH)
             chdir(GENERATED_FILES_PATH)
 
-            with open('CMakeLists.txt', FileMode.WRITE_ONLY) as output_file_handler:
+            with open(CMAKELISTS_FILENAME, FileMode.WRITE_ONLY) as output_file_handler:
                 output_file_handler.write(template_output)
