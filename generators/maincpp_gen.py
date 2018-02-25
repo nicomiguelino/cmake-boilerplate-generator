@@ -1,7 +1,7 @@
 from os import chdir, mkdir, path
 from string import Template
 
-from utilities.constants.FileConstants import *
+from utilities.constants.file_constants import *
 
 class MainCppGenerator:
     def __init__(self):
