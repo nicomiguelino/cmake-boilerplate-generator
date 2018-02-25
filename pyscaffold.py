@@ -2,8 +2,6 @@ from argparse import ArgumentParser
 from os import chdir, path
 from shutil import copytree, rmtree
 
-from generators.cmakelists_gen import CMakeListsGenerator
-from generators.maincpp_gen import MainCppGenerator
 from generators.project_gen import ProjectGenerator
 
 from utilities.constants.file_constants import PROJECT_ROOT_PATH, GENERATED_FILES_PATH
@@ -32,16 +30,8 @@ parser.add_argument(
 
 arguments = parser.parse_args()
 
-# TODO: Encapsulate CMakeListsGenerator and MainCppGenerator inside ProjectGenerator as instance variables.
-
-project_generator = ProjectGenerator(arguments.project_name)
+project_generator = ProjectGenerator(arguments.__dict__)
 project_generator.generate()
-
-cml_generator = CMakeListsGenerator(arguments.__dict__)
-cml_generator.generate()
-
-maincpp_generator = MainCppGenerator()
-maincpp_generator.generate()
 
 # TODO: Copy generated files in current directory. Remove import and cd action later.
 
