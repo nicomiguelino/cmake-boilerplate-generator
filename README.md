@@ -1,4 +1,4 @@
-# PyScaffold #
+# CMake Boilerplate Generator #
 
 **PyScaffold** is an automation script (a command line tool) written in Python 3 used for generating a C++ CMake project.
 
