@@ -16,7 +16,7 @@ Are you experiencing the hassle of manually creating folders - build, include, l
 
 ## Limitations ##
 
-PyScaffold is not a mature framework and is under active development. It's limitations are as follows:
+PyScaffold is not a mature framework ~and is under active development~. It's limitations are as follows:
 * The `--help` option is not yet reliable. Options don't have descriptions in it.
 * Generating of CMake project for C is not yet available.
 * The directory structure of generated project is fixed. The user do not have the power to modify it via a configuration file (at least).
